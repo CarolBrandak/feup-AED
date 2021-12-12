@@ -1,1 +1,3 @@
 # AED
+
+Exercicios das praticas
