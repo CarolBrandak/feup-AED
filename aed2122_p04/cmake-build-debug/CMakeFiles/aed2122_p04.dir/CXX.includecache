@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/funSortProblem.cpp
+funSortProblem.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/funSortProblem.h
+product.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/product.h
+algorithm
+-
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/funSortProblem.h
+iostream
+-
+vector
+-
+product.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/product.h
+piece.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/piece.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/piece.h
+string
+-
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/product.cpp
+product.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/product.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p04/Tests/product.h
+string
+-
+

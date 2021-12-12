@@ -1,0 +1,34 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p06/Tests/bst.h
+iostream
+-
+stack
+-
+queue
+-
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p06/Tests/dictionary.cpp
+iostream
+-
+string
+-
+fstream
+-
+dictionary.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p06/Tests/dictionary.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p06/Tests/dictionary.h
+string
+-
+fstream
+-
+bst.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p06/Tests/bst.h
+
