@@ -52,7 +52,12 @@ void Graph::bfs(int v) {
 // a) Contando diferentes somas de pares
 // TODO
 int Graph::outDegree(int v) {
-    return 0;
+    /*if(v<1||v>n)
+        return -1;
+    return nodes[v].adj.size();*/
+    if(!(v>n|| v<1))
+        return this->nodes.at(v).adj.size();
+    return -1;
 }
 
 // ----------------------------------------------------------
@@ -63,16 +68,46 @@ int Graph::outDegree(int v) {
 // a) Contando componentes conexos
 // TODO
 int Graph::connectedComponents() {
-    return 0;
+    int total=0;
+    for( auto node: nodes)
+        node.visited=false;
+    for(int i=1; i<=nodes.size()-1; i++){
+        if(!nodes[i].visited){
+            total++;
+            dfs(i);
+        }
+    }
+    return total;
 }
 
 // ..............................
 // b) Componente gigante
 // TODO
-int Graph::giantComponent() {
-    return 0;
+//
+int Graph::dfs_number(int v) {
+    int total=0;
+    nodes[v].visited = true;
+    total++;
+    for (auto e : nodes[v].adj) {
+        int w = e.dest;
+        if (!nodes[w].visited)
+            total++;
+            total+= dfs_number(w);
+    }
+    return total;
 }
 
+int Graph::giantComponent() {
+    int max=INT_MIN;
+    for( auto node: nodes)
+        node.visited=false;
+    for(int i=1; i<=nodes.size()-1; i++){
+        if(!nodes[i].visited){
+            max= dfs_number(i)<max ? dfs_number(i): max;
+        }
+    }
+    return max;
+}
 
 // ----------------------------------------------------------
 // Exercicio 3: Ordenacao topologica

@@ -47,6 +47,7 @@ public:
     int distance(int a, int b);
     int diameter();
     bool hasCycle();
+    int dfs_number(int v);
 };
 
 #endif

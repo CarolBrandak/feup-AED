@@ -1,0 +1,22 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p09/Tests/graph.cpp
+graph.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p09/Tests/graph.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p09/Tests/graph.h
+vector
+-
+list
+-
+queue
+-
+iostream
+-
+
