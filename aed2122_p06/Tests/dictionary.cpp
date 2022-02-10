@@ -44,8 +44,23 @@ void Dictionary::readFile(ifstream &f) {
 
 //TODO
 string Dictionary::consult(string word1, WordMean& previous, WordMean& next) const {
-
-    return "";
+    WordMean findMean(word1, "");
+    iteratorBST<WordMean> it = words.begin();
+    while (it != words.end()){
+        if((*it)==findMean)
+            return (*it).getMeaning();
+        else {
+            if(it==words.begin())
+                previous = (*it);
+            else
+                previous=next;
+            it++;
+            next=(*it);
+            if(findMean<next)
+                break;
+        }
+    }
+    return "word not found";
 }
 
 //TODO
