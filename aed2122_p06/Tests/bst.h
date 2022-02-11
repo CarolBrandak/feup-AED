@@ -463,7 +463,25 @@ bool iteratorBST<Comparable>::operator!= (const iteratorBST<Comparable>& it2) co
 //TODO
 template <class Comparable>
 int BST<Comparable>::size(const Comparable& el) const {
-    return -1;
+    BinaryNode<Comparable> *c;
+    c = find(el, root);
+    if (c == NULL)
+        return -1;
+    else{
+        int count = 0;
+        if(c->left == NULL && c->right == NULL) return count;
+        else{
+            if(c->left != NULL) {
+                count++;
+                count += size(c->left->element);
+            }
+            if(c->right != NULL) {
+                count++;
+                count += size(c->right->element);
+            }
+            return count;
+        }
+    }
 }
 
 #endif

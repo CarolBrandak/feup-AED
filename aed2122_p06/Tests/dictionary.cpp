@@ -65,7 +65,16 @@ string Dictionary::consult(string word1, WordMean& previous, WordMean& next) con
 
 //TODO
 bool Dictionary::update(string word1, string mean1) {
-    return true;
+    BSTItrIn<WordMean> it=words;
+    while(!it.isAtEnd()){
+        if (it.retrieve().getWord() == word1){
+            words.remove(it.retrieve());
+            words.insert(WordMean(word1, mean1));
+            return true;
+        }
+        it.advance();
+    }
+    return false;
 }
 
 //TODO
