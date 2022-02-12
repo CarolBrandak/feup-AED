@@ -9,7 +9,13 @@
 // ----------------------------------------------------------
 // TODO
 int FunWithBSTs::newBag(const vector<int>& collection, const vector<int>& bag) {
-  return 0;
+    set<int> cromos_total;
+    for (auto x:collection)
+        cromos_total.insert(x);
+    int res=cromos_total.size();
+    for (auto x: bag)
+        cromos_total.insert(x);
+    return cromos_total.size()-res;
 }
 
 // ----------------------------------------------------------
@@ -17,7 +23,28 @@ int FunWithBSTs::newBag(const vector<int>& collection, const vector<int>& bag) {
 // ----------------------------------------------------------
 // TODO
 int FunWithBSTs::battle(const vector<int>& alice, const vector<int>& bruno) {
-  return 0;
+    priority_queue<int> deckAlice, deckBruno;
+    int A, B;
+
+    for(auto x: alice)
+        deckAlice.push(x);
+    for(auto x: bruno)
+        deckBruno.push(x);
+
+    while( !deckAlice.empty() && !deckBruno.empty()){
+        A=deckAlice.top();
+        deckAlice.pop();
+        B=deckBruno.top();
+        deckBruno.pop();
+        if(A > B){
+            A=A-B;
+            deckAlice.push(A);
+        }else if(A < B){
+            B=B-A;
+            deckBruno.push(B);
+        }
+    }
+    return deckAlice.size()-deckBruno.size();
 }
 
 // ----------------------------------------------------------

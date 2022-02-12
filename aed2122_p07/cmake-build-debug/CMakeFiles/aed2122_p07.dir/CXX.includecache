@@ -1,0 +1,30 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p07/Tests/bst.h
+iostream
+-
+stack
+-
+queue
+-
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p07/Tests/funWithBSTs.cpp
+funWithBSTs.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p07/Tests/funWithBSTs.h
+bst.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p07/Tests/bst.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/aed2122_p07/Tests/funWithBSTs.h
+vector
+-
+string
+-
+set
+-
+
