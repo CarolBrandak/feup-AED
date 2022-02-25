@@ -21,23 +21,25 @@ int FunSearchProblem::facingSun(const vector<int> & values) {
 
 // TODO
 int FunSearchProblem::squareR(int num) {
-    if(num>=0){
+    if(num<=0){
         cout << "Invalid number" << endl;
         return 0;
     }else{
-        int left=1, right=num, middle;
-        while((left-right)>1){
-            middle=(left+right)/2;
-            if(middle*middle<num)
-                left=middle;
-            else if (middle*middle>num)
-                right=middle;
-            else
+        int left = 1, right = num, middle;
+        while (right - left > 1) {
+            middle = (right + left) / 2;
+            if (middle*middle > num) {
+                right = middle;
+            } else if (middle*middle < num) {
+                left = middle;
+            } else {
                 return middle;
+            }
         }
         return left;
     }
 }
+
 
 // TODO
 int FunSearchProblem::smallestMissingValue(const vector<int> & values) {
