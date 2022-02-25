@@ -39,20 +39,18 @@ vector<T> MyVector<T>::getValues() const {
 }
 
 //---------------------------------
-
 // TODO
 template <class T>
 T MyVector<T>::max() const {
-    if(values.empty()!=true){
+    if(values.empty()==false){
         T vmax;
-        for(int i=1; values.size()>i;i++){
-            if(values[i]>vmax){
+        for (int i=0;i<values.size();i++){
+            if (vmax<values[i])
                 vmax=values[i];
-            }
         }
         return vmax;
     }else{
-        EmptyVector e = EmptyVector();
+        EmptyVector e= EmptyVector();
         throw (e);
     }
 }
@@ -60,37 +58,26 @@ T MyVector<T>::max() const {
 // TODO
 template<class T>
 bool MyVector<T>::hasDuplicates() const {
-    bool va=false;
-    for(int i=0; values.size()>i; i++){
-        for(int j=i+1; values.size()>j; j++){
-            if(values[i]==values[j]){
-                va=true;
+    for (int i=0;i<values.size();i++){
+        for (int j=i+1;j<values.size();j++){
+            if (values[i]==values[j]){
+                return true;
             }
         }
     }
-	return va;
+    return false;
 }
 
 // TODO
 template<class T>
-bool notIn(vector<T> vector, T number){
-    for(int i=0; vector.size()>i; i++){
-        if(number==vector[i])
-            return false;
-    }
-    return true;
-}
-
-template<class T>
 void MyVector<T>::removeDuplicates() {
-    if(hasDuplicates()) {
-        vector<T> t={};
-        for(auto number: values){
-            if(notIn(t,number))
-                t.push_back(number);
+    for (int i=0;i<values.size();i++){
+        for (int j=i+1;j<values.size();j++){
+            if (values[i]==values[j]){
+                values.erase(values.begin()+j);
+                j--;
+            }
         }
-        values=t;
     }
 }
-
 
