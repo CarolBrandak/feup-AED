@@ -9,17 +9,21 @@
 #include <vector>
 #include <list>
 #include <iostream>
+#include <algorithm>
 
 using namespace std;
 
 class Graph {
     struct Edge {
+        int origin;
         int dest;   // Destination node
         int weight; // An integer weight
     };
 
     struct Node {
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
+        int distance;
+        int parent;
     };
 
     int n;              // Graph size (vertices are numbered from 1 to n)
