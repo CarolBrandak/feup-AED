@@ -92,7 +92,15 @@ bool HashTable<KeyType>::contains(const KeyType& k) {
 // TODO
 template <class KeyType>
 bool HashTable<KeyType>::insert(const KeyType& k) {
-    return false;
+    if(numEmpty>1 && !contains(k)){
+        int position=findPos(k);
+        HashEntry h={ACTIVE, k};
+        table[position]=h;
+        numEmpty--;
+        numActive++;
+        return true;
+    } else
+        return false;
 }
 
 // ..............................
@@ -100,7 +108,14 @@ bool HashTable<KeyType>::insert(const KeyType& k) {
 // TODO
 template <class KeyType>
 bool HashTable<KeyType>::remove(const KeyType& k) {
-    return false;
+    if(contains(k)){
+        int position=findPos(k);
+        HashEntry h={DELETED, k};
+        table[position]=h;
+        numActive--;
+        return true;
+    } else
+        return false;
 }
 
 // ..............................
