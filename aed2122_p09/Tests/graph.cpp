@@ -52,11 +52,8 @@ void Graph::bfs(int v) {
 // a) Contando diferentes somas de pares
 // TODO
 int Graph::outDegree(int v) {
-    /*if(v<1||v>n)
-        return -1;
-    return nodes[v].adj.size();*/
     if(!(v>n|| v<1))
-        return this->nodes.at(v).adj.size();
+        return nodes.at(v).adj.size();
     return -1;
 }
 
@@ -69,8 +66,7 @@ int Graph::outDegree(int v) {
 // TODO
 int Graph::connectedComponents() {
     int total=0;
-    for( auto node: nodes)
-        node.visited=false;
+
     for(int i=1; i<=nodes.size()-1; i++){
         if(!nodes[i].visited){
             total++;
@@ -84,17 +80,15 @@ int Graph::connectedComponents() {
 // b) Componente gigante
 // TODO
 //
-int Graph::dfs_number(int v) {
-    int total=0;
+void Graph::dfs_number(int v, int &total) {
+
     nodes[v].visited = true;
     total++;
     for (auto e : nodes[v].adj) {
         int w = e.dest;
         if (!nodes[w].visited)
-            total++;
-            total+= dfs_number(w);
+            dfs_number(w, total);
     }
-    return total;
 }
 
 int Graph::giantComponent() {
@@ -103,7 +97,9 @@ int Graph::giantComponent() {
         node.visited=false;
     for(int i=1; i<=nodes.size()-1; i++){
         if(!nodes[i].visited){
-            max= dfs_number(i)<max ? dfs_number(i): max;
+            int attemp=0;
+            dfs_number(i,attemp);
+            max= attemp>max ? attemp: max;
         }
     }
     return max;
@@ -113,8 +109,34 @@ int Graph::giantComponent() {
 // Exercicio 3: Ordenacao topologica
 // ----------------------------------------------------------
 // TODO
+
+void Graph::topologicalDFS(int v, list<int> &order){
+    nodes[v].visited= true;
+    for (Edge e:nodes[v].adj){
+        int node=e.dest;
+        if(!nodes[node].visited)
+            topologicalDFS(node,order);
+    }
+    order.push_front(v);
+}
+
+void Graph::resetNodes() {
+
+    for (int i = 1 ; i <= n ; i++) {
+        nodes[i].visited = false;
+        nodes[i].distance = 0;
+        nodes[i].color = WHITE;
+    }
+}
+
 list<int> Graph::topologicalSorting() {
-    list<int> order;
+    resetNodes();
+    list<int> order={};
+    for (int i=1 ;i<=n ;i++) {
+        if(!nodes[i].visited){
+            topologicalDFS(i, order);
+        }
+    }
     return order;
 }
 
@@ -125,21 +147,84 @@ list<int> Graph::topologicalSorting() {
 // ..............................
 // a) Distancia entre dois nos
 // TODO
-int Graph::distance(int a, int b) {
-    return 0;
+
+void Graph::fillDistances(int v) {
+
+    resetNodes();
+
+    queue<int> visitedNodes = {};
+    visitedNodes.push(v);
+    nodes[v].distance = 0;
+    nodes[v].visited = true;
+
+    while (!visitedNodes.empty()) {
+
+        int node = visitedNodes.front();
+        visitedNodes.pop();
+        cout << node << "->" << nodes[node].distance << " ";
+
+        for (Edge e : nodes[node].adj) {
+            int a = e.dest;
+            if (!nodes[a].visited) {
+                visitedNodes.push(a);
+                nodes[a].visited = true;
+                nodes[a].distance = nodes[node].distance + 1;
+            }
+        }
+    }
 }
+
+int Graph::distance(int a, int b) {
+    if (a == b)
+        return 0;
+    fillDistances(a);
+    return nodes[b].distance ? nodes[b].distance : -1;
+}
+
 
 // ..............................
 // b) Diametro
 // TODO
 int Graph::diameter() {
-    return 0;
+    if (connectedComponents() > 1) return -1;
+
+    int max = INT_MIN;
+
+    for (int i = 1 ; i <= n ; i++) {
+        fillDistances(i);
+        for (const Node &node : nodes) {
+            max = node.distance > max ? node.distance : max;
+        }
+    }
+
+    return max;
 }
 
 // ----------------------------------------------------------
 // Exercicio 5: To or not be… a DAG!
 // ----------------------------------------------------------
 // TODO
+
+bool Graph::colorsDFS(int v) {
+    nodes[v].color = GRAY;
+    for (Edge edge : nodes[v].adj) {
+        int dest = edge.dest;
+        if (nodes[dest].color == GRAY) {
+            return true;
+        } else {
+            colorsDFS(dest);
+        }
+    }
+    nodes[v].color = BLACK;
+}
+
 bool Graph::hasCycle() {
+    resetNodes();
+    for (int i = 0 ; i <= n ; i++) {
+        if (nodes[i].color == WHITE) {
+            bool answer = colorsDFS(i);
+            if (answer) return answer; else continue;
+        }
+    }
     return false;
 }

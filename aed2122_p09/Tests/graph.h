@@ -17,9 +17,13 @@ class Graph {
         int weight; // An integer weight
     };
 
+    enum color {WHITE, GRAY, BLACK};
+
     struct Node {
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
         bool visited;   // As the node been visited on a search?
+        int distance;   // distance of determinate node
+        color color;    // As the node been visited on a search?
     };
 
     int n;              // Graph size (vertices are numbered from 1 to n)
@@ -43,11 +47,16 @@ public:
     int outDegree(int v);
     int connectedComponents();
     int giantComponent();
+    void topologicalDFS(int v, list<int> &order);
+    void resetNodes();
     list<int> topologicalSorting();
     int distance(int a, int b);
     int diameter();
     bool hasCycle();
-    int dfs_number(int v);
+    void dfs_number(int v, int &total);
+    void fillDistances(int v);
+    bool colorsDFS(int v);
+
 };
 
 #endif
