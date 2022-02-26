@@ -99,8 +99,7 @@ bool HashTable<KeyType>::insert(const KeyType& k) {
         numEmpty--;
         numActive++;
         return true;
-    } else
-        return false;
+    } return false;
 }
 
 // ..............................
@@ -114,8 +113,7 @@ bool HashTable<KeyType>::remove(const KeyType& k) {
         table[position]=h;
         numActive--;
         return true;
-    } else
-        return false;
+    } return false;
 }
 
 // ..............................
@@ -123,7 +121,18 @@ bool HashTable<KeyType>::remove(const KeyType& k) {
 // TODO
 template <class KeyType>
 bool HashTable<KeyType>::rehash(int n) {
-    return false;
+    if (n>= numActive+1){
+        vector<HashEntry> oldTable=table;
+        vector<HashEntry> newTable(n);
+        table=newTable;
+        clear();
+
+        for(int i=0; i<oldTable.size(); i++){
+            if(oldTable[i].state==ACTIVE)
+                insert(oldTable[i].key);
+        }
+        return true;
+    } return false;
 }
 
 #endif
