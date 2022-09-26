@@ -1,7 +1,7 @@
 2.
-a) O(n^2)
-b) O(n)
-c) O(n^2)
-d) O(n*log(n))
-e) O(n)
-f) O(log(n))
+a) O(n^2) <br>
+b) O(n) <br>
+c) O(n^2) <br>
+d) O(n*log(n)) <br>
+e) O(n) <br>
+f) O(log(n)) <br>
