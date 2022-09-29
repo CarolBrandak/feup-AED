@@ -85,25 +85,51 @@ int FunWithCycles::winter(const vector<int> & v) {
 // a) count
 // TODO
 int FunWithCycles::count(const vector<int> & v, int n) {
-    return 0;
+    int cnt=0;
+    for (int i = 0; i < v.size(); i++) {
+        if(v[i]==n)
+            cnt++;
+    }
+    return cnt;
 }
 
 // b) hasDuplicates
 // TODO
 bool FunWithCycles::hasDuplicates(const vector<int> & v) {
+    for (int i = 0; i < v.size()-1; i++) {
+        for (int j = i+1; j < v.size(); j++) {
+            if(v[i]==v[j])
+                return true;
+        }
+    }
     return false;
 }
 
 // c) removeDuplicates
 // TODO
 void FunWithCycles::removeDuplicates(vector<int> & v) {
-
+    for (int i = 0; i < v.size()-1; i++) {
+        for (int j = i+1; j < v.size(); j++) {
+            if(v[i]==v[j]){
+                v.erase(v.begin()+j);
+                j--;
+            }
+        }
+    }
 }
 
 // d) merge
 // TODO
+#include <algorithm>
 vector<int> FunWithCycles::merge(const vector<int> & v1, const vector<int> & v2) {
     vector<int> ans;
+    for (int i = 0; i < v1.size(); i++) {
+        ans.push_back(v1[i]);
+    }
+    for (int i = 0; i < v2.size(); i++) {
+        ans.push_back(v2[i]);
+    }
+    std::sort(ans.begin(), ans.end());
     return ans;
 }
 
