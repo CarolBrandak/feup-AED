@@ -1,4 +1,4 @@
-"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED 22_23\aed2223_p01"
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -DCMAKE_BUILD_TYPE=Debug -DCMAKE_DEPENDS_USE_COMPILER=FALSE -G "CodeBlocks - MinGW Makefiles" "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p01"
 -- The C compiler identification is GNU 8.1.0
 -- The CXX compiler identification is GNU 8.1.0
 -- Detecting C compiler ABI info
@@ -14,4 +14,4 @@
 -- Found Python: C:/Users/anaca/anaconda3/python.exe (found version "3.8.5") found components: Interpreter 
 -- Configuring done
 -- Generating done
--- Build files have been written to: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED 22_23/aed2223_p01/cmake-build-debug
+-- Build files have been written to: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p01/cmake-build-debug

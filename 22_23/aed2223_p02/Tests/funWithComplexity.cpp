@@ -8,7 +8,18 @@
 // ----------------------------------------------------------
 // TODO
 int FunWithComplexity::maxSubArray(const vector<int> & v) {
-    return 0;
+    unsigned n = v.size();
+    int maxSoFar = v[0]; // porque é esta uma boa escolha para a melhor soma inicial?
+    for (unsigned i=0; i<n; i++) // todas as posicoes iniciais possiveis
+        for (unsigned j=i; j<n; j++) { // todas as posicoes finais possiveis
+            int sum = 0;
+            /*for (unsigned k=i; k<=j; k++) // calcular soma entre posicoes i e j
+                sum += v[k];*/
+
+            // neste momento sum é a soma dos elementos no intervalo [i,j]
+            if (sum > maxSoFar) maxSoFar = sum;
+        }
+    return maxSoFar;
 }
 
 

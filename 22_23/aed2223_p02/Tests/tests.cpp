@@ -53,7 +53,7 @@ TEST(test_4, n1000) {
     cout << fixed << setprecision(PRECISION) << "    Tempo: " << Timer::elapsed(0) << " ms" << endl;
 }
 
-/*
+
 TEST(test_4, n10000) {
     cout << "  . Caso com n = 10 000" << endl;
     Timer::start(0);
@@ -61,9 +61,9 @@ TEST(test_4, n10000) {
     Timer::stop(0);
     cout << fixed << setprecision(PRECISION) << "    Tempo: " << Timer::elapsed(0) << " ms" << endl;
 }
-*/
 
-/*
+
+
 TEST(test_4, n100000) {
     cout << "  . Caso com n = 100 000" << endl;
     Timer::start(0);
@@ -71,12 +71,12 @@ TEST(test_4, n100000) {
     Timer::stop(0);
     cout << fixed << setprecision(PRECISION) << "    Tempo: " << Timer::elapsed(0) << " ms" << endl;
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 5: Analisando um rio
 // ----------------------------------------------------------
-/*
+
 TEST(test_5, examples) {
     cout << "Testando 'river'" << endl;
 
@@ -84,9 +84,8 @@ TEST(test_5, examples) {
     EXPECT_EQ(3, FunWithComplexity::river({142,155,147,165,150,112,73}, 3, 150));
     EXPECT_EQ(4, FunWithComplexity::river({5,10,12,10,9,14,5,7,9,11,3,3}, 4, 10));
 }
-*/
 
-/*
+
 TEST(test_5, others_small) {
     int t, k;
 
@@ -98,9 +97,8 @@ TEST(test_5, others_small) {
     vector<int> v3 = readIntVectorAnd2Int("river/input03.txt", t, k);
     EXPECT_EQ(readInt("river/output03.txt"), FunWithComplexity::river(v3, t, k));
 }
-*/
 
-/*
+
 TEST(test_5, others_large) {
     int t, k;
 
@@ -110,12 +108,12 @@ TEST(test_5, others_large) {
     vector<int> v2 = readIntVectorAnd2Int("river/input09.txt", t, k);
     EXPECT_EQ(readInt("river/output09.txt"), FunWithComplexity::river(v2, t, k));
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 6: Espiral de Números
 // ----------------------------------------------------------
-/*
+
 TEST(test_6, examples) {
     cout << "Testando 'spiral'" << endl;
 
@@ -127,9 +125,8 @@ TEST(test_6, examples) {
     pair<int, int> p3 = {1, -1};
     EXPECT_EQ(p3, FunWithComplexity::spiral(3));
 }
-*/
 
-/*
+
 TEST(test_6, others_small) {
     cout << "  . Outros casos pequenos" << endl;
     pair<int, int> p1 = {-1, 1};
@@ -141,9 +138,8 @@ TEST(test_6, others_small) {
     pair<int, int> p4 = {-11, 7};
     EXPECT_EQ(p4, FunWithComplexity::spiral(503));
 }
-*/
 
-/*
+
 TEST(test_6, others_large) {
     cout << "  . Outros casos grandes" << endl;
     pair<int, int> p1 = {499, 499};
@@ -151,13 +147,13 @@ TEST(test_6, others_large) {
     pair<int, int> p2 = {1682, 15811};
     EXPECT_EQ(p2, FunWithComplexity::spiral(1000000000));
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 8: Caderno Quadriculado
 // ----------------------------------------------------------
 
-/*
+
 TEST(test_8, examples) {
     cout << "Testando 'gridSum'" << endl;
 
@@ -167,9 +163,8 @@ TEST(test_8, examples) {
     EXPECT_EQ(143, FunWithComplexity::gridSum(28, 44));
     EXPECT_EQ(7480, FunWithComplexity::gridSum(25, 245));
 }
-*/
 
-/*
+
 TEST(test_8, others_small) {
     cout << "  . Outros casos pequenos" << endl;
     EXPECT_EQ(278, FunWithComplexity::gridSum(131, 147));
@@ -183,16 +178,15 @@ TEST(test_8, others_small) {
     EXPECT_EQ(260, FunWithComplexity::gridSum(49, 82));
     EXPECT_EQ(860, FunWithComplexity::gridSum(105, 185));
 }
-*/
 
-/*
+
 TEST(test_8, others_large) {
     cout << "  . Outros casos grandes" << endl;
     EXPECT_EQ(15395874831770160ll, FunWithComplexity::gridSum(275107939, 625086360));
     EXPECT_EQ(27071915783418025ll, FunWithComplexity::gridSum(215299244, 684720683));
     EXPECT_EQ(18717502645457847ll, FunWithComplexity::gridSum(107454973, 491658519));
 }
-*/
+
 
 
 // ******************************************************************************

@@ -22,10 +22,10 @@ bool FunWithCycles::palindrome(const std::string & s) {
 bool FunWithCycles::palindromeSentence(const std::string & s) {
     std::string new_s;
     for(int i=0; s[i]; i++){
-        char c=s[i];
-        new_s+=tolower(c);
+        if(isalpha(s[i]))
+            new_s += tolower(s[i]);
     }
-    palindrome(new_s);
+    return palindrome(new_s);
 }
 
 // ----------------------------------------------------------
@@ -33,13 +33,25 @@ bool FunWithCycles::palindromeSentence(const std::string & s) {
 // ----------------------------------------------------------
 // TODO
 int FunWithCycles::nextInterestingNumber(int n, int sum) {
-    return 0;
+    n++;
+    while (digitSum(n)!=sum){
+        n++;
+    }
+    return n;
 }
 
 // Esta funcao auxiliar devera devolver a soma dos digitos de n
 // TODO
 int FunWithCycles::digitSum(int n) {
-    return 0;
+    int resto, resultado, soma = 0;
+    resultado = n;
+    while (resultado != 0)
+    {
+        resto = resultado % 10;
+        resultado = resultado / 10;
+        soma += resto;
+    }
+    return soma;
 }
 
 // ----------------------------------------------------------
@@ -47,7 +59,22 @@ int FunWithCycles::digitSum(int n) {
 // ----------------------------------------------------------
 // TODO
 int FunWithCycles::winter(const vector<int> & v) {
-    return 0;
+    std::vector<int> new_v;
+    for (int i = 0; i < v.size()-1; i++) {
+        new_v.push_back(v[i+1]-v[i]);
+    }
+
+    int cont=0, max=0;
+    for (int i = 0; i < new_v.size(); i++) {
+        if(new_v[i]<0){
+            cont++;
+            if(cont>max)
+                max=cont;
+        }else{
+            cont=0;
+        }
+    }
+    return max;
 }
 
 
@@ -112,3 +139,4 @@ vector<int> FunWithCycles::listPrimes(int n) {
 long long FunWithCycles::fastNextInterestingNumber(long long n, int sum) {
     return 0;
 }
+
