@@ -10,9 +10,13 @@
 // ----------------------------------------------------------
 // TODO
 int FunWithSearch::search(const vector<int> & v, int key) {
-    for (unsigned i=0; i<v.size(); i++)
-        if (v[i] == key)
-            return i; // found key
+    int low = 0 , high = v . size () - 1;
+    while ( low <= high ) {
+        int middle = low + ( high - low ) / 2;
+        if ( key < v [ middle ]) high = middle - 1;
+        else if ( key > v [ middle ]) low = middle + 1;
+        else return middle ;
+    }
     return -1;
 }
 
@@ -21,7 +25,15 @@ int FunWithSearch::search(const vector<int> & v, int key) {
 // ----------------------------------------------------------
 // TODO
 int FunWithSearch::lowerBound(const vector<int> &v, int key) {
-    return 0;
+
+    int low = 0 , high = v . size () - 1;
+    while ( low < high ) {
+        int middle = low + ( high - low ) / 2;
+        if (v [ middle ] <= key) high = middle;
+        else low = middle + 1;
+    }
+    if (low==key) return -1;
+    return low;
 }
 
 // ----------------------------------------------------------

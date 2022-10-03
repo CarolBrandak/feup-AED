@@ -81,7 +81,7 @@ TEST(test_1, input05) {
 // ----------------------------------------------------------
 // Exercicio 2: Limite Inferior
 // ----------------------------------------------------------
-/*
+
 TEST(test_2, examples) {
     cout << "Testando 'lowerBound'" << endl;
 
@@ -93,9 +93,9 @@ TEST(test_2, examples) {
     EXPECT_EQ(4, FunWithSearch::lowerBound({2,2,2,3,5,5,8,8,8,8}, 4));
     EXPECT_EQ(-1, FunWithSearch::lowerBound({2,2,2,3,5,5,8,8,8,8}, 9));
 }
-*/
 
-/*
+
+
 void testLowerBound(const string & inputFile, const string & outputFile) {
     ifstream input(inputFile);
     vector<int> v    = readIntVector(input);
@@ -136,12 +136,12 @@ TEST(test_2, input04) {
 TEST(test_2, input05) {
     testLowerBound("lowerBound/input05.txt", "lowerBound/output05.txt");
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 3: Intervalos
 // ----------------------------------------------------------
-/*
+
 TEST(test_3, examples) {
     cout << "Testando 'countRange'" << endl;
 
@@ -152,9 +152,9 @@ TEST(test_3, examples) {
     EXPECT_EQ(0, FunWithSearch::countRange({2,2,2,3,5,5,8,8,8,8}, 6, 7));
     EXPECT_EQ(0, FunWithSearch::countRange({2,2,2,3,5,5,8,8,8,8}, 1, 1));
 }
-*/
 
-/*
+
+
 void testCountRange(const string & inputFile, const string & outputFile) {
     ifstream input(inputFile);
     vector<int> v = readIntVector(input);
@@ -196,12 +196,12 @@ TEST(test_3, input04) {
 TEST(test_3, input05) {
     testCountRange("countRange/input05.txt", "countRange/output05.txt");
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 4a: Viagem de mochila às costas (isPossible)
 // ----------------------------------------------------------
-/*
+
 TEST(test_4a, examples) {
     cout << "Testando 'isPossible'" << endl;
 
@@ -214,9 +214,8 @@ TEST(test_4a, examples) {
     EXPECT_TRUE(FunWithSearch::isPossible({7,9,3,8,2,2,9,4,3,4,7,9,9}, 18,  5));
     EXPECT_FALSE(FunWithSearch::isPossible({7,9,3,8,2,2,9,4,3,4,7,9,9}, 17,  5));
 }
-*/
 
-/*
+
 TEST(test_4a, others) {
     cout << "Testando 'isPossible'" << endl;
 
@@ -247,12 +246,12 @@ TEST(test_4a, others) {
                                             15,5,18,11,12,20,5,7,18,7,16,20,13,13,12,15,13,
                                             16,6,5,18,12,20,15,10,11,7,9,15,15,18,10,15}, 73, 6));
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 4a: Viagem de mochila às costas (partitions)
 // ----------------------------------------------------------
-/*
+
 TEST(test_4b, examples) {
     cout << "Testando 'partitions'" << endl;
 
@@ -261,9 +260,9 @@ TEST(test_4b, examples) {
     EXPECT_EQ(27, FunWithSearch::partitions({7,9,3,8,2,2,9,4,3,4,7,9,9}, 3));
     EXPECT_EQ(18, FunWithSearch::partitions({7,9,3,8,2,2,9,4,3,4,7,9,9}, 5));
 }
-*/
 
-/*
+
+
 void testPartitions(const string & inputFile, const string & outputFile) {
     ifstream input(inputFile);
     vector<int> v = readIntVector(input);
@@ -304,7 +303,7 @@ TEST(test_4b, input04) {
 TEST(test_4b, input05) {
     testPartitions("partitions/input05.txt", "partitions/output05.txt");
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 5: Somas mais próximas
