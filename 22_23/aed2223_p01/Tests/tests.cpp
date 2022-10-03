@@ -245,7 +245,7 @@ TEST(test_5, merge_other) {
 // Exercicio 6: Brincando com numeros primos
 // ----------------------------------------------------------
 
-/*
+
 // ------------------------------
 // a) isPrime
 TEST(test_6, isPrime_examples) {
@@ -273,9 +273,9 @@ TEST(test_6, isPrime_other_false) {
     EXPECT_FALSE(FunWithCycles::isPrime(1915));
     EXPECT_FALSE(FunWithCycles::isPrime(2279));
 }
-*/
 
-/*
+
+
 // ------------------------------
 // b) factorize
 TEST(test_6, factorize_examples) {
@@ -290,9 +290,9 @@ TEST(test_6, factorize_examples) {
     vector<int> answer2 = {3037};
     EXPECT_EQ(v2, answer2);
 }
-*/
 
-/*
+
+
 TEST(test_6, factorize_other) {
     cout << "  . Outros casos" << endl;
     vector<int> v1 = FunWithCycles::factorize(12345);
@@ -315,9 +315,7 @@ TEST(test_6, factorize_other) {
     vector<int> answer5 = {2,3,5,7,11,11,13,17};
     EXPECT_EQ(v5, answer5);
 }
-*/
 
-/*
 // ------------------------------
 // c) listPrimes
 TEST(test_6, listPrime_examples) {
@@ -341,7 +339,7 @@ TEST(test_6, listPrime_other) {
                            101,103,107,109,113,127,131,137,139,149,151,157,163,167,173};
     EXPECT_EQ(v2, answer2);
 }
-*/
+
 
 // ----------------------------------------------------------
 // Exercicio 7: Numeros interessantes (versao desafio)

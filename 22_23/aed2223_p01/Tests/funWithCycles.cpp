@@ -140,6 +140,13 @@ vector<int> FunWithCycles::merge(const vector<int> & v1, const vector<int> & v2)
 // a) isPrime
 // TODO
 bool FunWithCycles::isPrime(int n) {
+    int cnt=0;
+    for (int i = 2; i <= n/2; i++) {
+        if(n%i==0) {
+            cnt++;
+        }
+    }
+    if(cnt==0) return true;
     return false;
 }
 
@@ -147,6 +154,16 @@ bool FunWithCycles::isPrime(int n) {
 // TODO
 vector<int> FunWithCycles::factorize(int n) {
     vector<int> ans;
+    if(isPrime(n)) ans.push_back(n);
+    else{
+        for (int i = 2; i <= n/2; i++) {
+            if( n%i==0 && (i%2!=0 || i==2) && isPrime(i)) {
+                ans.push_back(i);
+
+            }
+        }
+    }
+
     return ans;
 }
 
