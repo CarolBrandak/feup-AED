@@ -15,5 +15,6 @@ public:
     string getId() const;
     float getPrice() const;
     float getWeight() const;
+    bool operator<(const Product &p) const;
 };
 #endif

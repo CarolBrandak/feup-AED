@@ -10,7 +10,6 @@ FunSortProblem::FunSortProblem() {}
 // TODO
 void FunSortProblem::expressLane(vector<Product> &products, unsigned k) {
     if(products.size()>k) {
-
         for (int i = 0; i < products.size(); i++) {
             int min = i;
             for (int j = i + 1; j < products.size(); j++) {
@@ -52,10 +51,57 @@ int FunSortProblem::minDifference(const vector<unsigned> &values, unsigned nc) {
     }
 }
 
-
 // TODO
+
+bool key(pair<float,char> &p1, pair<float,char> &p2){
+    return p1.first<p2.first;
+}
+
+bool exist(vector<char> l){
+    for(auto i: l){
+        if (i!='V')
+            return true;
+    }
+    return false;
+}
+
+void generateTrain(vector<char> &l){
+    char che='A';
+    for(auto & h:l){
+        if(h==che){
+            h='V';
+            if(che=='A')
+                che='D';
+            else
+                che='A';
+        }
+    }
+}
 unsigned FunSortProblem::minPlatforms (const vector<float> &arrival, const vector<float> &departure) {
-    return 0;
+    char che='A';
+    char par='D';
+    int p=0;
+    vector<pair<float,char>> order={};
+    if(arrival.size()!=0 || departure.size()!=0){
+        for(auto time:arrival){
+            order.push_back(pair<float,char>(time,che));
+        }
+        for(auto time:departure){
+            order.push_back(pair<float,char>(time,par));
+        }
+        sort(order.begin(),order.end(),key);
+
+        vector<char> l={};
+        for(auto i:order){
+            l.push_back(i.second);
+        }
+        while(exist(l)){
+            generateTrain(l);
+            p++;
+        }
+    }
+
+    return p;
 }
 
 //TODO
