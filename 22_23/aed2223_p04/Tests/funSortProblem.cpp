@@ -105,11 +105,32 @@ unsigned FunSortProblem::minPlatforms (const vector<float> &arrival, const vecto
 }
 
 //TODO
+template <class Comparable>
+void insertionSortCnt(vector<Comparable> &v, unsigned & cnt) {
+    for (unsigned p = 1; p < v.size(); p++) {
+        Comparable tmp = v[p];
+        unsigned j;
+        for (j = p; j > 0 && tmp < v[j-1]; j--) {
+            v[j] = v[j - 1];
+            cnt++;
+        }
+        v[j] = tmp;
+    }
+}
+
 unsigned FunSortProblem::numInversions(vector <int> v) {
-    return 0;
+    unsigned a = 0;
+    insertionSortCnt(v, a);
+    return a;
 }
 
 // TODO
+bool NBKey (const Piece &p1, const Piece &p2) {
+    return p1.getDiameter() < p2.getDiameter();
+}
+
 void FunSortProblem::nutsBolts(vector<Piece> &nuts, vector<Piece> &bolts) {
+    sort(nuts.begin(), nuts.end(), NBKey);
+    sort(bolts.begin(), bolts.end(), NBKey);
 }
 
