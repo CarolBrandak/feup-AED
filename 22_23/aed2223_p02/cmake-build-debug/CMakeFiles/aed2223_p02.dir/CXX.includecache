@@ -1,0 +1,18 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p02/Tests/funWithComplexity.cpp
+funWithComplexity.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p02/Tests/funWithComplexity.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p02/Tests/funWithComplexity.h
+vector
+-
+iostream
+-
+
