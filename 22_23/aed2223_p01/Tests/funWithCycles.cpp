@@ -156,14 +156,18 @@ vector<int> FunWithCycles::factorize(int n) {
     vector<int> ans;
     if(isPrime(n)) ans.push_back(n);
     else{
-        for (int i = 2; i <= n/2; i++) {
-            if( n%i==0 && (i%2!=0 || i==2) && isPrime(i)) {
+        while (n%2 == 0){
+            ans.push_back(2);
+            n/=2;
+        }
+        for (int i = 3; i <= sqrt(n); i = i+2){
+            while (n%i == 0){
                 ans.push_back(i);
-
+                n = n/i;
             }
         }
+        if(isPrime(n) && n!=1) ans.push_back(n);
     }
-
     return ans;
 }
 
@@ -171,6 +175,10 @@ vector<int> FunWithCycles::factorize(int n) {
 // TODO
 vector<int> FunWithCycles::listPrimes(int n) {
     vector<int> ans;
+    for (int i = 2; i <= n; i++) {
+        if(isPrime(i))
+            ans.push_back(i);
+    }
     return ans;
 }
 
