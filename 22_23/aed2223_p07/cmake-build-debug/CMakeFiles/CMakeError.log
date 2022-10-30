@@ -1,0 +1,136 @@
+Determining if the function shm_open exists in the rt failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_3ae73/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_3ae73.dir\build.make CMakeFiles/cmTC_3ae73.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_3ae73.dir/CheckFunctionExists.c.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=shm_open -o CMakeFiles\cmTC_3ae73.dir\CheckFunctionExists.c.obj -c "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_3ae73.exe
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_3ae73.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_3ae73.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\cmTC_3ae73.dir/objects.a @CMakeFiles\cmTC_3ae73.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=shm_open -Wl,--whole-archive CMakeFiles\cmTC_3ae73.dir/objects.a -Wl,--no-whole-archive -o cmTC_3ae73.exe -Wl,--out-implib,libcmTC_3ae73.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_3ae73.dir\linklibs.rsp
+C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lrt
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_3ae73.dir\build.make:100: cmTC_3ae73.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_3ae73/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_675b4/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_675b4.dir\build.make CMakeFiles/cmTC_675b4.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_675b4.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -pedantic  -pedantic-errors  -Wshorten-64-to-32   -Wshorten-64-to-32 -std=c++11 -o CMakeFiles\cmTC_675b4.dir\src.cxx.obj -c "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p07\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx"
+G__~1.EXE: error: unrecognized command line option '-Wshorten-64-to-32'
+G__~1.EXE: error: unrecognized command line option '-Wshorten-64-to-32'
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_675b4.dir\build.make:77: CMakeFiles/cmTC_675b4.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_675b4/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_94413/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_94413.dir\build.make CMakeFiles/cmTC_94413.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_94413.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -DHAVE_CXX_FLAG_WD654  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing  -wd654   -wd654 -std=c++11 -o CMakeFiles\cmTC_94413.dir\src.cxx.obj -c "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p07\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx"
+G__~1.EXE: error: unrecognized command line option '-wd654'
+G__~1.EXE: error: unrecognized command line option '-wd654'
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_94413.dir\build.make:77: CMakeFiles/cmTC_94413.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_94413/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_15a97/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_15a97.dir\build.make CMakeFiles/cmTC_15a97.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_15a97.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing  -Wthread-safety   -Wthread-safety -std=c++11 -o CMakeFiles\cmTC_15a97.dir\src.cxx.obj -c "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p07\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx"
+G__~1.EXE: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+G__~1.EXE: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_15a97.dir\build.make:77: CMakeFiles/cmTC_15a97.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_15a97/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Determining if the function shm_open exists in the rt failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_a9b5d/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_a9b5d.dir\build.make CMakeFiles/cmTC_a9b5d.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building C object CMakeFiles/cmTC_a9b5d.dir/CheckFunctionExists.c.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe   -DCHECK_FUNCTION_EXISTS=shm_open -o CMakeFiles\cmTC_a9b5d.dir\CheckFunctionExists.c.obj -c "C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\share\cmake-3.20\Modules\CheckFunctionExists.c"
+Linking C executable cmTC_a9b5d.exe
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E cmake_link_script CMakeFiles\cmTC_a9b5d.dir\link.txt --verbose=1
+"C:\Program Files\JetBrains\CLion 2021.2.3\bin\cmake\win\bin\cmake.exe" -E rm -f CMakeFiles\cmTC_a9b5d.dir/objects.a
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\ar.exe cr CMakeFiles\cmTC_a9b5d.dir/objects.a @CMakeFiles\cmTC_a9b5d.dir\objects1.rsp
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\gcc.exe  -DCHECK_FUNCTION_EXISTS=shm_open -Wl,--whole-archive CMakeFiles\cmTC_a9b5d.dir/objects.a -Wl,--no-whole-archive -o cmTC_a9b5d.exe -Wl,--out-implib,libcmTC_a9b5d.dll.a -Wl,--major-image-version,0,--minor-image-version,0 @CMakeFiles\cmTC_a9b5d.dir\linklibs.rsp
+C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/../lib/gcc/x86_64-w64-mingw32/8.1.0/../../../../x86_64-w64-mingw32/bin/ld.exe: cannot find -lrt
+collect2.exe: error: ld returned 1 exit status
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_a9b5d.dir\build.make:100: cmTC_a9b5d.exe] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_a9b5d/fast] Error 2
+
+
+
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WSHORTEN_64_TO_32 failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_e51a1/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_e51a1.dir\build.make CMakeFiles/cmTC_e51a1.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_e51a1.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -DHAVE_CXX_FLAG_WSHORTEN_64_TO_32  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -pedantic  -pedantic-errors  -Wshorten-64-to-32   -Wshorten-64-to-32 -std=c++11 -o CMakeFiles\cmTC_e51a1.dir\src.cxx.obj -c "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p07\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx"
+G__~1.EXE: error: unrecognized command line option '-Wshorten-64-to-32'
+G__~1.EXE: error: unrecognized command line option '-Wshorten-64-to-32'
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_e51a1.dir\build.make:77: CMakeFiles/cmTC_e51a1.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_e51a1/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WD654 failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_9f3f3/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_9f3f3.dir\build.make CMakeFiles/cmTC_9f3f3.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_9f3f3.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -DHAVE_CXX_FLAG_WD654  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing  -wd654   -wd654 -std=c++11 -o CMakeFiles\cmTC_9f3f3.dir\src.cxx.obj -c "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p07\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx"
+G__~1.EXE: error: unrecognized command line option '-wd654'
+G__~1.EXE: error: unrecognized command line option '-wd654'
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_9f3f3.dir\build.make:77: CMakeFiles/cmTC_9f3f3.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_9f3f3/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }
+Performing C++ SOURCE FILE Test HAVE_CXX_FLAG_WTHREAD_SAFETY failed with the following output:
+Change Dir: C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp
+
+Run Build Command(s):C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe -f Makefile cmTC_4573e/fast && C:/PROGRA~1/MINGW-~1/X86_64~1.0-P/mingw64/bin/mingw32-make.exe  -f CMakeFiles\cmTC_4573e.dir\build.make CMakeFiles/cmTC_4573e.dir/build
+mingw32-make.exe[1]: Entering directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+Building CXX object CMakeFiles/cmTC_4573e.dir/src.cxx.obj
+C:\PROGRA~1\MINGW-~1\X86_64~1.0-P\mingw64\bin\G__~1.EXE -DHAVE_CXX_FLAG_WTHREAD_SAFETY  -Wall  -Wextra  -Wshadow  -Wfloat-equal  -pedantic  -pedantic-errors  -fstrict-aliasing  -Wno-deprecated-declarations  -Wstrict-aliasing  -Wthread-safety   -Wthread-safety -std=c++11 -o CMakeFiles\cmTC_4573e.dir\src.cxx.obj -c "C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p07\cmake-build-debug\CMakeFiles\CMakeTmp\src.cxx"
+G__~1.EXE: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+G__~1.EXE: error: unrecognized command line option '-Wthread-safety'; did you mean '-fthread-jumps'?
+mingw32-make.exe[1]: *** [CMakeFiles\cmTC_4573e.dir\build.make:77: CMakeFiles/cmTC_4573e.dir/src.cxx.obj] Error 1
+mingw32-make.exe[1]: Leaving directory 'C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/cmake-build-debug/CMakeFiles/CMakeTmp'
+mingw32-make.exe: *** [Makefile:126: cmTC_4573e/fast] Error 2
+
+
+Source file was:
+int main() { return 0; }

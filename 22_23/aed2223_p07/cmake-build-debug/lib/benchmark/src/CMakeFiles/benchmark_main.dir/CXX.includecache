@@ -1,0 +1,50 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+../lib/benchmark/include/benchmark/benchmark.h
+stdint.h
+-
+algorithm
+-
+cassert
+-
+cstddef
+-
+iosfwd
+-
+limits
+-
+map
+-
+set
+-
+string
+-
+utility
+-
+vector
+-
+benchmark/export.h
+../lib/benchmark/include/benchmark/benchmark/export.h
+atomic
+-
+initializer_list
+-
+type_traits
+-
+utility
+-
+intrin.h
+-
+
+../lib/benchmark/include/benchmark/export.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/lib/benchmark/src/benchmark_main.cc
+benchmark/benchmark.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/lib/benchmark/src/benchmark/benchmark.h
+

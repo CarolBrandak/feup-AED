@@ -1,0 +1,26 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/dictionary.cpp
+iostream
+-
+string
+-
+fstream
+-
+dictionary.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/dictionary.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/dictionary.h
+string
+-
+fstream
+-
+set
+-
+
