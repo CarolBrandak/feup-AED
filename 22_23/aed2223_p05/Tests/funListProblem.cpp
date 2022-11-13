@@ -21,7 +21,20 @@ list<int> FunListProblem::removeHigher(list<int> &values, int x) {
 
 //TODO
 list<pair<int,int>> FunListProblem::overlappingIntervals(list<pair<int,int>> values) {
-    list<pair<int,int>> res;
+    values.sort();
+    auto it=values.begin();
 
-    return res;
+    while(it != prev(values.end(),1)) {
+        if (it->second > next(it, 1)->first) {
+            if (it->second < next(it, 1)->second)
+                it->second = next(it, 1)->second;
+            it++;
+            it = values.erase(it);
+            it--;
+            continue;
+        }
+        it++;
+    }
+
+    return values;
 }
