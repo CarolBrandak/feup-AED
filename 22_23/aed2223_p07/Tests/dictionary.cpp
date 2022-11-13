@@ -57,7 +57,7 @@ void Dictionary::readFile(ifstream &f) {
 
 //TODO
 string Dictionary::consult(string w1, WordMean& previous, WordMean& next) const {
-    WordMean findMean(w1, "");
+    /*WordMean findMean(w1, "");
     iteratorBST<WordMean> it = words.begin();
     while (it != words.end()){
         if((*it)==findMean)
@@ -72,7 +72,7 @@ string Dictionary::consult(string w1, WordMean& previous, WordMean& next) const 
             if(findMean<next)
                 break;
         }
-    }
+    }*/
     return "word not found";
 }
 
@@ -83,4 +83,10 @@ bool Dictionary::update(string w1, string m1) {
 
 //TODO
 void Dictionary::print() const {
+    /*BSTItrIn<WordMean> itr(words);
+    while(!itr.isAtEnd()){
+        cout << itr.retrieve().getWord() << endl;
+        cout << itr.retrieve().getMeaning() << endl;
+        itr.advance();
+    }*/
 }
