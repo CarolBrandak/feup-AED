@@ -13,8 +13,8 @@ int FunWithComplexity::maxSubArray(const vector<int> & v) {
     for (unsigned i=0; i<n; i++) // todas as posicoes iniciais possiveis
         for (unsigned j=i; j<n; j++) { // todas as posicoes finais possiveis
             int sum = 0;
-            /*for (unsigned k=i; k<=j; k++) // calcular soma entre posicoes i e j
-                sum += v[k];*/
+            for (unsigned k=i; k<=j; k++) // calcular soma entre posicoes i e j
+                sum += v[k];
 
             // neste momento sum é a soma dos elementos no intervalo [i,j]
             if (sum > maxSoFar) maxSoFar = sum;

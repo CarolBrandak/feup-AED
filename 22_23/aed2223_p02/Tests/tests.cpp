@@ -45,6 +45,7 @@ TEST(test_4, n100) {
     cout << fixed << setprecision(PRECISION) << "    Tempo: " << Timer::elapsed(0) << " ms" << endl;
 }
 
+/*
 TEST(test_4, n1000) {
     cout << "  . Caso com n = 1 000" << endl;
     Timer::start(0);
@@ -71,7 +72,7 @@ TEST(test_4, n100000) {
     Timer::stop(0);
     cout << fixed << setprecision(PRECISION) << "    Tempo: " << Timer::elapsed(0) << " ms" << endl;
 }
-
+*/
 
 // ----------------------------------------------------------
 // Exercicio 5: Analisando um rio
