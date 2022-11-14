@@ -1,0 +1,36 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/Testes/2021/aed2122_ci1_pratica/Tests/Order.h
+string
+-
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/Testes/2021/aed2122_ci1_pratica/Tests/Packer.h
+string
+-
+queue
+-
+Order.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/Testes/2021/aed2122_ci1_pratica/Tests/Order.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/Testes/2021/aed2122_ci1_pratica/Tests/Warehouse.cpp
+Warehouse.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/Testes/2021/aed2122_ci1_pratica/Tests/Warehouse.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/Testes/2021/aed2122_ci1_pratica/Tests/Warehouse.h
+vector
+-
+list
+-
+stack
+-
+algorithm
+-
+Packer.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/Testes/2021/aed2122_ci1_pratica/Tests/Packer.h
+
