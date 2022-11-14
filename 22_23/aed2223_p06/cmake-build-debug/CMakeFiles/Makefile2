@@ -257,8 +257,8 @@ lib/googletest-master/googletest/clean: lib/googletest-master/googletest/CMakeFi
 # Target rules for target CMakeFiles/aed2223_p06.dir
 
 # All Build rule for target.
-CMakeFiles/aed2223_p06.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/aed2223_p06.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
+CMakeFiles/aed2223_p06.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest_main.dir/all
 CMakeFiles/aed2223_p06.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 CMakeFiles/aed2223_p06.dir/all: lib/benchmark/src/CMakeFiles/benchmark_main.dir/all
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\aed2223_p06.dir\build.make CMakeFiles/aed2223_p06.dir/depend
@@ -286,8 +286,8 @@ CMakeFiles/aed2223_p06.dir/clean:
 # Target rules for target lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir
 
 # All Build rule for target.
-lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
+lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googlemock\CMakeFiles\gmock_main.dir\build.make lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\googletest-master\googlemock\CMakeFiles\gmock_main.dir\build.make lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/build
 	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir="C:\Users\anaca\OneDrive\Ambiente de Trabalho\AED\22_23\aed2223_p06\cmake-build-debug\CMakeFiles" --progress-num=54,55 "Built target gmock_main"
@@ -578,9 +578,9 @@ lib/benchmark/test/CMakeFiles/benchmark_test.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/benchmark_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/benchmark_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/benchmark_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\benchmark_gtest.dir\build.make lib/benchmark/test/CMakeFiles/benchmark_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\benchmark_gtest.dir\build.make lib/benchmark/test/CMakeFiles/benchmark_gtest.dir/build
@@ -770,9 +770,9 @@ lib/benchmark/test/CMakeFiles/spec_arg_verbosity_test.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\perf_counters_gtest.dir\build.make lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\perf_counters_gtest.dir\build.make lib/benchmark/test/CMakeFiles/perf_counters_gtest.dir/build
@@ -1183,9 +1183,9 @@ lib/benchmark/test/CMakeFiles/perf_counters_test.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/statistics_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/statistics_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/statistics_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/statistics_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/statistics_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/statistics_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\statistics_gtest.dir\build.make lib/benchmark/test/CMakeFiles/statistics_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\statistics_gtest.dir\build.make lib/benchmark/test/CMakeFiles/statistics_gtest.dir/build
@@ -1351,9 +1351,9 @@ lib/benchmark/test/CMakeFiles/cxx03_test.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\benchmark_name_gtest.dir\build.make lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\benchmark_name_gtest.dir\build.make lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/build
@@ -1380,9 +1380,9 @@ lib/benchmark/test/CMakeFiles/benchmark_name_gtest.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\benchmark_random_interleaving_gtest.dir\build.make lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\benchmark_random_interleaving_gtest.dir\build.make lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/build
@@ -1409,9 +1409,9 @@ lib/benchmark/test/CMakeFiles/benchmark_random_interleaving_gtest.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\commandlineflags_gtest.dir\build.make lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\commandlineflags_gtest.dir\build.make lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/build
@@ -1438,9 +1438,9 @@ lib/benchmark/test/CMakeFiles/commandlineflags_gtest.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/string_util_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/string_util_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/string_util_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/string_util_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/string_util_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/string_util_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\string_util_gtest.dir\build.make lib/benchmark/test/CMakeFiles/string_util_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\string_util_gtest.dir\build.make lib/benchmark/test/CMakeFiles/string_util_gtest.dir/build
@@ -1467,9 +1467,9 @@ lib/benchmark/test/CMakeFiles/string_util_gtest.dir/clean:
 # Target rules for target lib/benchmark/test/CMakeFiles/time_unit_gtest.dir
 
 # All Build rule for target.
+lib/benchmark/test/CMakeFiles/time_unit_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/time_unit_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock.dir/all
 lib/benchmark/test/CMakeFiles/time_unit_gtest.dir/all: lib/googletest-master/googlemock/CMakeFiles/gmock_main.dir/all
-lib/benchmark/test/CMakeFiles/time_unit_gtest.dir/all: lib/googletest-master/googletest/CMakeFiles/gtest.dir/all
 lib/benchmark/test/CMakeFiles/time_unit_gtest.dir/all: lib/benchmark/src/CMakeFiles/benchmark.dir/all
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\time_unit_gtest.dir\build.make lib/benchmark/test/CMakeFiles/time_unit_gtest.dir/depend
 	$(MAKE) $(MAKESILENT) -f lib\benchmark\test\CMakeFiles\time_unit_gtest.dir\build.make lib/benchmark/test/CMakeFiles/time_unit_gtest.dir/build

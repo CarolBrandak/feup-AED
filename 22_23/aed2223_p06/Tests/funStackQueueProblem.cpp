@@ -9,16 +9,19 @@ FunStackQueueProblem::FunStackQueueProblem() {}
 // TODO
 vector<string> FunStackQueueProblem::binaryNumbers(int n) {
     vector<string> res={};
-    //queue< string> q;
-    //q.push("1");
-
+    int cnt;
     for (int i = 1; i <=n ; i++) {
-        int t=0;
-        t=i%2;
-        i=i/2;
-        //q.push(to_string(i));
-        //string s1 = q.front();
-        res.push_back(to_string(t));
+        cnt=i;
+        int bin = 0;
+        int rem, j = 1;
+        while (i!=0) {
+            rem = i % 2;
+            i /= 2;
+            bin += rem * j;
+            j *= 10;
+        }
+        i=cnt;
+        res.push_back(to_string(bin));
     }
     return res;
 }
@@ -27,6 +30,24 @@ vector<string> FunStackQueueProblem::binaryNumbers(int n) {
 vector<int> FunStackQueueProblem::calculateSpan(vector<int> prices)
 {
     vector<int> res;
+    int cnt=1;
+    stack<int> s;
+    stack<int> copy;
+    for (int i = 0; i < prices.size(); i++) {
+        cnt=1;
+        copy=s;
+        if(s.empty()){
+            res.push_back(1);
+            s.push(prices[i]);
+            continue;
+        }
+        while(prices[i] > copy.top() && !copy.empty()){
+            cnt++;
+            copy.pop();
+        }
+        res.push_back(cnt);
+        s.push(prices[i]);
+    }
 
     return res;
 }

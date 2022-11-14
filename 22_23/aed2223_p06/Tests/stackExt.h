@@ -24,8 +24,7 @@ bool StackExt<T>::empty() const {
 //TODO
 template <class T>
 T& StackExt<T>::top() {
-    if(!values.empty())
-        return values.top();
+    if(!values.empty()) return values.top();
 }
 
 //TODO
@@ -36,16 +35,7 @@ void StackExt<T>::pop() {
     }
     this->values.pop();
 }
-/*
-values.push(val);
 
-// Add it to the min. values stack, if needed
-if (minimums.size() == 0){
-minimums.push(val);			// First element! Add it, it is the minimum
-}
-else if (val <= minimums.top()){	// New minimum value
-minimums.push(val);
-}*/
 //TODO
 template <class T>
 void StackExt<T>::push(const T& val) {
