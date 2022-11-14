@@ -6,20 +6,14 @@
 
 #IncludeRegexTransform: 
 
-C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/dictionary.cpp
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/funSetProblem.cpp
+funSetProblem.h
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/funSetProblem.h
+
+C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/funSetProblem.h
 iostream
 -
-string
--
-fstream
--
-dictionary.h
-C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/dictionary.h
-
-C:/Users/anaca/OneDrive/Ambiente de Trabalho/AED/22_23/aed2223_p07/Tests/dictionary.h
-string
--
-fstream
+vector
 -
 set
 -
