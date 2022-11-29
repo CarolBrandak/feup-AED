@@ -40,6 +40,7 @@ public:
     int weightedOutDegree(int v);
     int connectedComponents();
     int giantComponent();
+    void dfs_number(int v, int &total);
     list<int> topologicalSorting();
     bool hasCycle();
 };

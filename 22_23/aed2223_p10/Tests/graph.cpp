@@ -35,14 +35,23 @@ void Graph::dfs(int v) {
 // a) Devolvendo o grau
 // TODO
 int Graph::outDegree(int v) {
-    return 0;
+    if(!(v>n|| v<1))
+        return nodes.at(v).adj.size();
+    return -1;
 }
 
 // ..............................
 // b) Devolvendo o grau... pesado
 // TODO
 int Graph::weightedOutDegree(int v) {
-    return 0;
+    int res=0;
+    if(!(v>n|| v<1)){
+        for (auto it =nodes[v].adj.begin(); it!=nodes[v].adj.end();it++) {
+            res+=it->weight;
+        }
+        return res;
+    }
+    return -1;
 }
 
 // ----------------------------------------------------------
@@ -53,14 +62,43 @@ int Graph::weightedOutDegree(int v) {
 // a) Contando componentes conexos
 // TODO
 int Graph::connectedComponents() {
-    return 0;
+    int total=0;
+    for ( int v=1; v<=nodes.size()-1; v++){
+        if (!nodes[v].visited) {
+            total++;
+            dfs(v);
+        }
+    }
+    return total;
 }
 
 // ..............................
 // b) Componente gigante
 // TODO
+void Graph::dfs_number(int v, int &total) {
+    nodes[v].visited = true;
+    total++;
+    for (auto e : nodes[v].adj) {
+        int w = e.dest;
+        if (!nodes[w].visited)
+            dfs_number(w, total);
+    }
+}
+
 int Graph::giantComponent() {
-    return 0;
+    int max=0;
+    for( auto node: nodes)
+        node.visited=false;
+    for (int i = 1; i < n-1; i++) {
+        if (!nodes[i].visited) {
+            int total=0;
+            dfs_number(i, total);
+            if(total>max){
+                max=total;
+            }
+        }
+    }
+    return max;
 }
 
 // ----------------------------------------------------------
