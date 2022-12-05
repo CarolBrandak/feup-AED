@@ -105,10 +105,26 @@ int Graph::giantComponent() {
 // Exercicio 3: Ordenacao topologica
 // ----------------------------------------------------------
 // TODO
+void Graph::topologicalDFS(int v, list<int> &order){
+    nodes[v].visited= true;
+    for (Edge e:nodes[v].adj){
+        int node=e.dest;
+        if(!nodes[node].visited)
+            topologicalDFS(node,order);
+    }
+    order.push_front(v);
+}
+
 list<int> Graph::topologicalSorting() {
-    list<int> order;
+    list<int> order={};
+    for (int i=1 ;i<=n ;i++) {
+        if(!nodes[i].visited){
+            topologicalDFS(i, order);
+        }
+    }
     return order;
 }
+
 
 // ----------------------------------------------------------
 // Exercicio 4: To be or not be… a DAG!

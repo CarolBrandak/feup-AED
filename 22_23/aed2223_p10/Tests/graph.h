@@ -42,7 +42,9 @@ public:
     int giantComponent();
     void dfs_number(int v, int &total);
     list<int> topologicalSorting();
+    void topologicalDFS(int v, list<int> &order);
     bool hasCycle();
+
 };
 
 #endif
