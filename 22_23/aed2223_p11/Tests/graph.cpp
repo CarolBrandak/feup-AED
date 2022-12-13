@@ -32,6 +32,8 @@ void Graph::dfs(int v) {
 // ----------------------------------------------------------
 // TODO
 bool Graph::bipartite() {
+
+
     return false;
 }
 
