@@ -14,11 +14,13 @@ class Graph {
     struct Edge {
         int dest;   // Destination node
         int weight; // An integer weight
+        char color;
     };
 
     struct Node {
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
         bool visited;   // As the node been visited on a search?
+        char color;
     };
 
     int n;              // Graph size (vertices are numbered from 1 to n)
@@ -34,6 +36,8 @@ public:
 
     // Depth-First Search: example implementation
     void dfs(int v);
+
+    bool dfs_cycle(int v);
 
     // ----- Functions to implement in this class -----
     int outDegree(int v);

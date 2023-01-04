@@ -26,6 +26,18 @@ void Graph::dfs(int v) {
     }
 }
 
+bool Graph::dfs_cycle(int v) {
+    nodes[v].color = 1;     // gray, visiting
+
+    for (auto e : nodes[v].adj) {
+        int w = e.dest;
+        if (nodes[w].color == 1) return true;           // cycle found!
+        if (nodes[w].color == 0)
+            if (dfs_cycle(w)) return true;      // if white, visit
+    }
+    nodes[v].color = 2;     // black, finished dfs
+    return false;
+}
 
 // ----------------------------------------------------------
 // Exercicio 1: Introdução a uma classe simplificada de grafos
@@ -131,5 +143,11 @@ list<int> Graph::topologicalSorting() {
 // ----------------------------------------------------------
 // TODO
 bool Graph::hasCycle() {
+    for (Node &node : nodes) node.color = 0;    // white!
+
+    for (int v = 1; v <= n; v++) {
+        if (nodes[v].color == 0)
+            if (dfs_cycle(v)) return true;
+    }
     return false;
 }
