@@ -2,6 +2,7 @@
 #define JACKPOT_H_
 
 #include <string>
+#include <iostream>
 #include <vector>
 #include <unordered_set>
 #include <algorithm>
@@ -27,7 +28,7 @@ struct betHash
 
     // TODO
 	bool operator() (const Bet& b1, const Bet& b2) const {
-        return true;
+        return b1.getNumbers()==b2.getNumbers() && b1.getPlayer()==b2.getPlayer();
 	}
 };
 
