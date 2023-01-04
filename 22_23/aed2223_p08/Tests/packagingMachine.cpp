@@ -25,13 +25,38 @@ HeapBox PackagingMachine::getBoxes() const {
 
 // TODO
 unsigned PackagingMachine::loadObjects(vector<Object> &objs) {
-	return 0;
+    unsigned res=0;
+    for (auto i = objs.begin(); i != objs.end(); i++) {
+        if(i->getWeight()<=boxCapacity){
+            res++;
+            objects.push(*i);
+            i++;
+            objs.erase(prev(i, 1));
+            i-=2;
+        }
+    }
+	return res;
 }
 
 
 // TODO
 Box PackagingMachine::searchBox(Object& obj) {
-    return Box(0);
+    HeapBox copy;
+    bool e=false;
+    Box res;
+    while(!boxes.empty()){
+        if(boxes.top().getFree()>=obj.getWeight() && !e){
+            e= true;
+            res=boxes.top();
+        }else{
+            copy.push(boxes.top());
+        }
+        boxes.pop();
+    }
+    boxes=copy;
+    if(e)
+        return res;
+    return Box();
 }
 
 
