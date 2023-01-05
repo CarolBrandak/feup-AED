@@ -46,12 +46,62 @@ void Graph::bfs(int v) {
     }
 }
 
+int Graph::bfs_distance(int a, int b) {
+    for (int i=1; i<=n; i++) {
+        nodes[i].visited = false;
+        nodes[i].dist = -1;
+    }
+    queue<int> q;
+    q.push(a);
+    nodes[a].visited = true;
+    nodes[a].dist = 0;
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        for (auto e : nodes[u].adj) {
+            int w = e.dest;
+            if (!nodes[w].visited) {
+                q.push(w);
+                nodes[w].visited = true;
+                nodes[w].dist = nodes[u].dist + 1;
+                if (w == b) break;
+            }
+        }
+    }
+    return nodes[b].dist;
+}
+
+int Graph::bfs_max_distance(int a) {
+    if (!nodes[a].visited) return -1;
+    for (int i=1; i<=n; i++) {
+        nodes[i].visited = false;
+        nodes[i].dist = -1;
+    }
+    queue<int> q;
+    q.push(a);
+    nodes[a].visited = true;
+    nodes[a].dist = 0;
+    int max_dist = 0;
+    while (!q.empty()) {
+        int u = q.front(); q.pop();
+        for (auto e : nodes[u].adj) {
+            int w = e.dest;
+            if (!nodes[w].visited) {
+                q.push(w);
+                nodes[w].visited = true;
+                nodes[w].dist = nodes[u].dist + 1;
+                if (nodes[w].dist > max_dist) max_dist = nodes[w].dist;
+            }
+        }
+    }
+    return max_dist;
+}
+
 // ----------------------------------------------------------
 // Exercicio 1a: Distáncia entre dois nós
 // ----------------------------------------------------------
 // TODO
 int Graph::distance(int a, int b) {
-    return 0;
+    return bfs_distance(a, b);
 }
 
 // ----------------------------------------------------------
@@ -59,5 +109,12 @@ int Graph::distance(int a, int b) {
 // ----------------------------------------------------------
 // TODO
 int Graph::diameter() {
-    return 0;
+    int max = 0;
+    nodes[1].visited = true;
+    for (int v = 1; v <= n; v++) {
+        int d = bfs_max_distance(v);
+        if (d == -1) return -1;
+        if (d > max) max = d;
+    }
+    return max;
 }

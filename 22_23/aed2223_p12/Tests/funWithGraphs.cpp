@@ -2,6 +2,7 @@
 // Pedro Ribeiro (DCC/FCUP) [last update: 11/12/2022]
 
 #include "funWithGraphs.h"
+#include <bits/stdc++.h>
 
 // ----------------------------------------------------------
 // Some Example Graphs
@@ -62,22 +63,108 @@ Graph FunWithGraphs::graph3() {
 // Exercicio 2: Um labirinto 2D
 // ----------------------------------------------------------
 // TODO
+typedef pair<int, int> pii;
 int FunWithGraphs::maze(int rows, int cols, string m[]) {
-    return 0;
+    pii start, end;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (m[i][j] == 'P') {start = {i, j};}
+            if (m[i][j] == 'T') {end = {i, j};}
+        }
+    }
+    bool visited[rows][cols];
+    int dist[rows][cols];
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            visited[i][j] = false;
+            dist[i][j] = -1;
+        }
+    }
+    int dx[] = {0, 0, 1, -1};
+    int dy[] = {1, -1, 0, 0};
+
+    queue<pii> q;
+    q.push(start);
+    visited[start.first][start.second] = true;
+    dist[start.first][start.second] = 0;
+
+    while (!q.empty()) {
+        pii u = q.front();
+        q.pop();
+        for (int i = 0; i < 4; i++) {
+            int x = u.first + dx[i];
+            int y = u.second + dy[i];
+            if (!visited[x][y] && m[x][y] != '#') {
+                visited[x][y] = true;
+                dist[x][y] = dist[u.first][u.second] + 1;
+                q.push({x, y});
+            }
+        }
+    }
+    return dist[end.first][end.second];
 }
 
 // ----------------------------------------------------------
 // Exercicio 3: Nuvem de Cinzas
 // ----------------------------------------------------------
 // TODO
-pair<int, int> FunWithGraphs::volcano(int rows, int cols, string m[]) {
-    return {0, 0};
+pii FunWithGraphs::volcano(int rows, int cols, string m[]) {
+    int dx[] = {0, 0, 1, -1};
+    int dy[] = {1, -1, 0, 0};
+    int dist[rows][cols];
+    queue<pii> q;
+    int airports = 0, airports_covered = 0;
+    for (int i = 0; i < rows; i++) {
+        for (int j = 0; j < cols; j++) {
+            if (m[i][j] == '#') {
+                q.push({i, j});
+                dist[i][j] = 0;
+            }
+            else { dist[i][j] = -1; }
+            if (m[i][j] == 'A') { airports++; }
+        }
+    }
+    pii ans = {-1, -1};
+    while (!q.empty()) {
+        pii u = q.front();
+        q.pop();
+        for (int i = 0; i < 4; i++) {
+            int x = u.first + dx[i];
+            int y = u.second + dy[i];
+            if (x >= 0 && x < rows && y >= 0 && y < cols) {
+                if (dist[x][y] == -1) {
+                    dist[x][y] = dist[u.first][u.second] + 1;
+                    q.push({x, y});
+                    if (m[x][y] == 'A') {
+                        if (airports_covered == 0) ans.first = dist[x][y];
+                        airports_covered++;
+                        if (airports_covered == airports) {
+                            ans.second = dist[x][y];
+                            return ans;
+                        }
+                    }
+                }
+            }
+        }
+    }
+    return ans;
 }
 
 // ----------------------------------------------------------
 // Exercicio 4: Quadrados Mágicos
 // ----------------------------------------------------------
 // TODO
-pair<int, string> FunWithGraphs::game(const vector<int> & target) {
-    return {0, ""};
+typedef pair<int, string> pis;
+typedef vector<int> vi;
+typedef vector<char> vc;
+typedef set<int> si;
+
+
+struct Node {
+
+};
+
+
+pis FunWithGraphs::game(const vi &target) {
+
 }

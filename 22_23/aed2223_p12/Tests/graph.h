@@ -20,6 +20,7 @@ class Graph {
     struct Node {
         list<Edge> adj; // The list of outgoing edges (to adjacent nodes)
         bool visited;   // As the node been visited on a search?
+        int dist;       // Distance from the source node
     };
 
     int n;              // Graph size (vertices are numbered from 1 to n)
@@ -38,10 +39,13 @@ public:
 
     // Breadth-First Search: example implementation
     void bfs(int v);
+    int bfs_distance(int a, int b);
 
     // ----- Functions to implement in this class -----
     int distance(int a, int b);
     int diameter();
+
+    int bfs_max_distance(int a);
 };
 
 #endif

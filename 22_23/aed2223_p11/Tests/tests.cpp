@@ -126,6 +126,74 @@ TEST(test_3, articulationPoints) {
     EXPECT_EQ(art12, answer12);
 }
 
+Graph graph17() {
+    Graph g(8, false);
+    g.addEdge(1,2);
+    g.addEdge(2,3);
+    g.addEdge(3,4);
+    g.addEdge(4,5);
+    g.addEdge(5,6);
+    g.addEdge(6,7);
+    g.addEdge(7,8);
+    return g;
+}
+
+Graph graph18() {
+    Graph g(8, false);
+    g.addEdge(1,2);
+    g.addEdge(2,3);
+    g.addEdge(3,4);
+    g.addEdge(4,5);
+    g.addEdge(5,6);
+    g.addEdge(6,7);
+    g.addEdge(7,8);
+    g.addEdge(8,1);
+    return g;
+}
+
+Graph graph19() {
+    Graph g(13, false);
+    g.addEdge(1,2);
+    g.addEdge(1,4);
+    g.addEdge(2,3);
+    g.addEdge(4,5);
+    g.addEdge(3,6);
+    g.addEdge(5,6);
+    g.addEdge(6,7);
+    g.addEdge(6,8);
+    g.addEdge(7,9);
+    g.addEdge(8,9);
+    g.addEdge(9,10);
+    g.addEdge(10,11);
+    g.addEdge(11,12);
+    g.addEdge(11,13);
+    g.addEdge(12,13);
+    return g;
+}
+
+TEST(test_3, articulationPoints_extra) {
+    cout << "Testando 'articulationPoints'" << endl;
+
+    cout << "  . graph17" << endl;
+    Graph g17 = graph17();
+    list<int> art17 = g17.articulationPoints();
+    art17.sort();
+    list<int> answer17 = {2,3,4,5,6,7};
+    EXPECT_EQ(art17, answer17);
+
+    cout << "  . graph18" << endl;
+    Graph g18 = graph18();
+    list<int> art18 = g18.articulationPoints();
+    list<int> answer18 = {};
+    EXPECT_EQ(art18, answer18);
+
+    cout << "  . graph19" << endl;
+    Graph g19 = graph19();
+    list<int> art19 = g19.articulationPoints();
+    list<int> answer19 = {6,9,10,11};
+    EXPECT_EQ(art19, answer19);
+}
+
 // ----------------------------------------------------------
 // Exercicio 4: Quartel da Polícia
 // ----------------------------------------------------------
